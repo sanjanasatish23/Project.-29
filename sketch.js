@@ -47,7 +47,7 @@ function setup() {
 }
 
 function preload(){
-  polygonImg = loadImage("images/polygon.png")
+  polygonImg = loadImage("polygon.png");
 }
 
 function draw() {
@@ -94,4 +94,10 @@ function mouseDragged(){
 
 function mouseReleased(){
   slingshot.fly();
+}
+
+function keyPressed(){
+  if(keyCode === 32){
+    slingshot.attach(this.polygon);
+  }
 }
